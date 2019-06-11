@@ -3,7 +3,7 @@ Anime schedule, korean subtitle for iOS with SwiftUI + Combine and MVVM architec
 
 ## App Features
 - [x] Anime schedule List
-- [ ] Anime Detail
+- [x] Anime Detail
 - [ ] Recent Subtitle
 - [ ] Bookmarks
 - [ ] Complete Anime List
