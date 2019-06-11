@@ -24,7 +24,7 @@ struct OrganizationListRow : View {
                     .lineLimit(nil)
                     .font(Font.system(size: 20))
                 
-                Text("\(anime.time) ~")
+                Text("\(anime.timeStr) ~")
                     .color(.gray)
                     .font(Font.system(size: 16))
             }

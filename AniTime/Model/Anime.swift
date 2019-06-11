@@ -11,7 +11,7 @@ import SwiftUI
 struct Anime: Decodable, Hashable, Identifiable {
     let id: Int
     let name: String
-    let time: String
+    let timeStr: String
     private let _time: String?
     let urlLink: URL?
     private let _urlLink: String?
@@ -45,9 +45,9 @@ struct Anime: Decodable, Hashable, Identifiable {
         // MARK: Data Binding
         if let time = self._time,
             !time.isEmpty {
-            self.time = "\(time.dropLast(2)):\(time.dropFirst(2))"
+            self.timeStr = "\(time.dropLast(2)):\(time.dropFirst(2))"
         } else {
-            self.time = ""
+            self.timeStr = ""
         }
         
         if let urlLink = _urlLink?.lowercased(),
