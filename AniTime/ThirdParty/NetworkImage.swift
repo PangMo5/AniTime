@@ -7,13 +7,14 @@ struct NetworkImage: SwiftUI.View {
     @State private var image: UIImage? = nil
     
     let imageURL: URL?
-    let placeholderImage: UIImage
+    var placeholderImage: UIImage = (UIImage(systemName: "star")?.filled(withColor: .gray))!
+    var contentMode: ContentMode = .fit
     let animation: Animation = .basic()
     
     var body: some SwiftUI.View {
         Image(uiImage: image ?? placeholderImage)
             .resizable()
-            .aspectRatio(contentMode: .fit)
+            .aspectRatio(contentMode: contentMode)
             .onAppear(perform: loadImage)
             .transition(.opacity)
             .id(image ?? placeholderImage)
@@ -39,8 +40,7 @@ struct NetworkImage: SwiftUI.View {
 // swiftlint:disable:next type_name
 struct NetworkImage_Previews: PreviewProvider {
     static var previews: some SwiftUI.View {
-        NetworkImage(imageURL: URL(string: "https://www.apple.com/favicon.ico")!,
-                     placeholderImage: UIImage(systemName: "bookmark")!)
+        NetworkImage(imageURL: URL(string: "https://www.apple.com/favicon.ico")!)
     }
 }
 #endif

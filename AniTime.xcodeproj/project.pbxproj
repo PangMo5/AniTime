@@ -9,13 +9,20 @@
 /* Begin PBXBuildFile section */
 		92450A3222AF5457006EC453 /* NetworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92450A3122AF5457006EC453 /* NetworkImage.swift */; };
 		92450A3922AF561E006EC453 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 92450A3822AF561E006EC453 /* Nuke */; };
+		92450A3E22AF8E93006EC453 /* AnimeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92450A3D22AF8E93006EC453 /* AnimeListView.swift */; };
+		92450A4222AF9310006EC453 /* AnimeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92450A4122AF9310006EC453 /* AnimeDetailView.swift */; };
+		92450A4422AFA76F006EC453 /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92450A4322AFA76F006EC453 /* Subtitle.swift */; };
+		92450A4D22AFA999006EC453 /* SubtitleListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92450A4C22AFA999006EC453 /* SubtitleListRow.swift */; };
+		92450A4F22AFAEC7006EC453 /* AnimeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92450A4E22AFAEC6006EC453 /* AnimeDetailViewModel.swift */; };
+		92450A5122AFAF21006EC453 /* SubtitleListRequset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92450A5022AFAF21006EC453 /* SubtitleListRequset.swift */; };
+		92450A5422AFB252006EC453 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92450A5322AFB252006EC453 /* SafariViewController.swift */; };
 		92ACCB1222AE3CF800535D2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACCB1122AE3CF800535D2F /* AppDelegate.swift */; };
 		92ACCB1422AE3CF800535D2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACCB1322AE3CF800535D2F /* SceneDelegate.swift */; };
 		92ACCB1822AE3CFA00535D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92ACCB1722AE3CFA00535D2F /* Assets.xcassets */; };
 		92ACCB1B22AE3CFA00535D2F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92ACCB1A22AE3CFA00535D2F /* Preview Assets.xcassets */; };
 		92ACCB1E22AE3CFA00535D2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92ACCB1C22AE3CFA00535D2F /* LaunchScreen.storyboard */; };
-		92ACCB2A22AE3D1200535D2F /* OrganizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACCB2722AE3D1200535D2F /* OrganizationView.swift */; };
-		92ACCB2B22AE3D1200535D2F /* OrganizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACCB2822AE3D1200535D2F /* OrganizationViewModel.swift */; };
+		92ACCB2A22AE3D1200535D2F /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACCB2722AE3D1200535D2F /* ScheduleView.swift */; };
+		92ACCB2B22AE3D1200535D2F /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACCB2822AE3D1200535D2F /* ScheduleViewModel.swift */; };
 		92ACCB2C22AE3D1200535D2F /* MainContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACCB2922AE3D1200535D2F /* MainContainerView.swift */; };
 		92ACCB2F22AE3D2000535D2F /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACCB2E22AE3D2000535D2F /* Anime.swift */; };
 		92ACCB3222AE3DA300535D2F /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 92ACCB3122AE3DA300535D2F /* SwifterSwift */; };
@@ -23,12 +30,19 @@
 		92ACCB3A22AE40F300535D2F /* AnySubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACCB3922AE40F300535D2F /* AnySubscription.swift */; };
 		92ACCB3D22AE464E00535D2F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACCB3B22AE464E00535D2F /* APIService.swift */; };
 		92ACCB4122AE470600535D2F /* AnimeListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACCB4022AE470600535D2F /* AnimeListRequest.swift */; };
-		92ACCB4322AF435A00535D2F /* OrganizationListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACCB4222AF435A00535D2F /* OrganizationListRow.swift */; };
+		92ACCB4322AF435A00535D2F /* AnimeListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACCB4222AF435A00535D2F /* AnimeListRow.swift */; };
 		92ACCB4522AF4DE000535D2F /* APIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACCB4422AF4DE000535D2F /* APIServiceError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		92450A3122AF5457006EC453 /* NetworkImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkImage.swift; sourceTree = "<group>"; };
+		92450A3D22AF8E93006EC453 /* AnimeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeListView.swift; sourceTree = "<group>"; };
+		92450A4122AF9310006EC453 /* AnimeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailView.swift; sourceTree = "<group>"; };
+		92450A4322AFA76F006EC453 /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
+		92450A4C22AFA999006EC453 /* SubtitleListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleListRow.swift; sourceTree = "<group>"; };
+		92450A4E22AFAEC6006EC453 /* AnimeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailViewModel.swift; sourceTree = "<group>"; };
+		92450A5022AFAF21006EC453 /* SubtitleListRequset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleListRequset.swift; sourceTree = "<group>"; };
+		92450A5322AFB252006EC453 /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
 		92ACCB0E22AE3CF800535D2F /* AniTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AniTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92ACCB1122AE3CF800535D2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92ACCB1322AE3CF800535D2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,15 +50,15 @@
 		92ACCB1A22AE3CFA00535D2F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		92ACCB1D22AE3CFA00535D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92ACCB1F22AE3CFA00535D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92ACCB2722AE3D1200535D2F /* OrganizationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationView.swift; sourceTree = "<group>"; };
-		92ACCB2822AE3D1200535D2F /* OrganizationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationViewModel.swift; sourceTree = "<group>"; };
+		92ACCB2722AE3D1200535D2F /* ScheduleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		92ACCB2822AE3D1200535D2F /* ScheduleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		92ACCB2922AE3D1200535D2F /* MainContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainContainerView.swift; sourceTree = "<group>"; };
 		92ACCB2E22AE3D2000535D2F /* Anime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
 		92ACCB3622AE409300535D2F /* URLSession+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Combine.swift"; sourceTree = "<group>"; };
 		92ACCB3922AE40F300535D2F /* AnySubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnySubscription.swift; sourceTree = "<group>"; };
 		92ACCB3B22AE464E00535D2F /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		92ACCB4022AE470600535D2F /* AnimeListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeListRequest.swift; sourceTree = "<group>"; };
-		92ACCB4222AF435A00535D2F /* OrganizationListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationListRow.swift; sourceTree = "<group>"; };
+		92ACCB4222AF435A00535D2F /* AnimeListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeListRow.swift; sourceTree = "<group>"; };
 		92ACCB4422AF4DE000535D2F /* APIServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +83,33 @@
 			path = ThirdParty;
 			sourceTree = "<group>";
 		};
+		92450A3C22AF8E4F006EC453 /* Anime */ = {
+			isa = PBXGroup;
+			children = (
+				92450A3D22AF8E93006EC453 /* AnimeListView.swift */,
+				92ACCB4222AF435A00535D2F /* AnimeListRow.swift */,
+				92450A4122AF9310006EC453 /* AnimeDetailView.swift */,
+				92450A4E22AFAEC6006EC453 /* AnimeDetailViewModel.swift */,
+			);
+			path = Anime;
+			sourceTree = "<group>";
+		};
+		92450A4522AFA95F006EC453 /* Subtitle */ = {
+			isa = PBXGroup;
+			children = (
+				92450A4C22AFA999006EC453 /* SubtitleListRow.swift */,
+			);
+			path = Subtitle;
+			sourceTree = "<group>";
+		};
+		92450A5222AFB237006EC453 /* Representable */ = {
+			isa = PBXGroup;
+			children = (
+				92450A5322AFB252006EC453 /* SafariViewController.swift */,
+			);
+			path = Representable;
+			sourceTree = "<group>";
+		};
 		92ACCB0522AE3CF800535D2F = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +129,7 @@
 		92ACCB1022AE3CF800535D2F /* AniTime */ = {
 			isa = PBXGroup;
 			children = (
+				92450A5222AFB237006EC453 /* Representable */,
 				92450A3022AF5444006EC453 /* ThirdParty */,
 				92ACCB3F22AE46D600535D2F /* API */,
 				92ACCB3522AE407E00535D2F /* Extensions */,
@@ -114,20 +156,21 @@
 		92ACCB2522AE3D1200535D2F /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				92ACCB2622AE3D1200535D2F /* Organization */,
 				92ACCB2922AE3D1200535D2F /* MainContainerView.swift */,
+				92450A3C22AF8E4F006EC453 /* Anime */,
+				92450A4522AFA95F006EC453 /* Subtitle */,
+				92ACCB2622AE3D1200535D2F /* Schedule */,
 			);
 			path = Common;
 			sourceTree = "<group>";
 		};
-		92ACCB2622AE3D1200535D2F /* Organization */ = {
+		92ACCB2622AE3D1200535D2F /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				92ACCB2722AE3D1200535D2F /* OrganizationView.swift */,
-				92ACCB2822AE3D1200535D2F /* OrganizationViewModel.swift */,
-				92ACCB4222AF435A00535D2F /* OrganizationListRow.swift */,
+				92ACCB2722AE3D1200535D2F /* ScheduleView.swift */,
+				92ACCB2822AE3D1200535D2F /* ScheduleViewModel.swift */,
 			);
-			path = Organization;
+			path = Schedule;
 			sourceTree = "<group>";
 		};
 		92ACCB2D22AE3D2000535D2F /* Model */ = {
@@ -135,6 +178,7 @@
 			children = (
 				92ACCB3922AE40F300535D2F /* AnySubscription.swift */,
 				92ACCB2E22AE3D2000535D2F /* Anime.swift */,
+				92450A4322AFA76F006EC453 /* Subtitle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,6 +197,7 @@
 				92ACCB3B22AE464E00535D2F /* APIService.swift */,
 				92ACCB4422AF4DE000535D2F /* APIServiceError.swift */,
 				92ACCB4022AE470600535D2F /* AnimeListRequest.swift */,
+				92450A5022AFAF21006EC453 /* SubtitleListRequset.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -207,7 +252,6 @@
 			mainGroup = 92ACCB0522AE3CF800535D2F;
 			packageReferences = (
 				92ACCB3022AE3DA300535D2F /* XCRemoteSwiftPackageReference "SwifterSwift" */,
-				92450A3322AF54E5006EC453 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				92450A3722AF561E006EC453 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = 92ACCB0F22AE3CF800535D2F /* Products */;
@@ -239,17 +283,24 @@
 			files = (
 				92ACCB1222AE3CF800535D2F /* AppDelegate.swift in Sources */,
 				92ACCB4522AF4DE000535D2F /* APIServiceError.swift in Sources */,
-				92ACCB4322AF435A00535D2F /* OrganizationListRow.swift in Sources */,
+				92450A5422AFB252006EC453 /* SafariViewController.swift in Sources */,
+				92ACCB4322AF435A00535D2F /* AnimeListRow.swift in Sources */,
+				92450A3E22AF8E93006EC453 /* AnimeListView.swift in Sources */,
+				92450A4D22AFA999006EC453 /* SubtitleListRow.swift in Sources */,
 				92ACCB2C22AE3D1200535D2F /* MainContainerView.swift in Sources */,
-				92ACCB2B22AE3D1200535D2F /* OrganizationViewModel.swift in Sources */,
+				92450A4422AFA76F006EC453 /* Subtitle.swift in Sources */,
+				92450A4F22AFAEC7006EC453 /* AnimeDetailViewModel.swift in Sources */,
+				92ACCB2B22AE3D1200535D2F /* ScheduleViewModel.swift in Sources */,
 				92ACCB3A22AE40F300535D2F /* AnySubscription.swift in Sources */,
 				92450A3222AF5457006EC453 /* NetworkImage.swift in Sources */,
 				92ACCB3D22AE464E00535D2F /* APIService.swift in Sources */,
-				92ACCB2A22AE3D1200535D2F /* OrganizationView.swift in Sources */,
+				92ACCB2A22AE3D1200535D2F /* ScheduleView.swift in Sources */,
 				92ACCB1422AE3CF800535D2F /* SceneDelegate.swift in Sources */,
 				92ACCB2F22AE3D2000535D2F /* Anime.swift in Sources */,
 				92ACCB4122AE470600535D2F /* AnimeListRequest.swift in Sources */,
+				92450A5122AFAF21006EC453 /* SubtitleListRequset.swift in Sources */,
 				92ACCB3722AE409300535D2F /* URLSession+Combine.swift in Sources */,
+				92450A4222AF9310006EC453 /* AnimeDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,14 +504,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		92450A3322AF54E5006EC453 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.6.0;
-			};
-		};
 		92450A3722AF561E006EC453 /* XCRemoteSwiftPackageReference "Nuke" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kean/Nuke.git";

@@ -52,14 +52,33 @@ struct Anime: Decodable, Hashable, Identifiable {
         
         if let urlLink = _urlLink?.lowercased(),
             !urlLink.isEmpty {
-            if let url = URL(string: urlLink) {
+            if urlLink.contains("http://") || urlLink.contains("https://") {
+                self.urlLink = URL(string: urlLink)
+            } else if let url = URL(string: "https://" + urlLink) {
                 self.urlLink = url
             } else {
-                self.urlLink = URL(string: "https" + urlLink)
+                self.urlLink = nil
             }
         } else {
             self.urlLink = nil
         }
+    }
+    
+    init(sampleID: Int, name: String) {
+        self.id = sampleID
+        self.name = name
+        self.timeStr = "00:00"
+        self.urlLink = URL(string: "https://en.wikipedia.org/wiki/Anime")
+        self.startDate = Date()?.yesterday
+        self.endDate = Date()
+        self.episodeCount = 24
+        self.previousID = 1
+        self.previousEpisodeCount = 12
+        self.thumbnailImage = URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Anime_eye.svg/340px-Anime_eye.svg.png")
+        self.animeNicknameList = []
+        
+        self._time = nil
+        self._urlLink = nil
     }
     
     enum CodingKeys: String, CodingKey {

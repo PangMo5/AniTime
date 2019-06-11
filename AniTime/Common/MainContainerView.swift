@@ -16,7 +16,7 @@ struct MainContainerView: View {
     var body: some View {
         NavigationView {
             TabbedView(selection: $selection) {
-                OrganizationView(viewModel: .init())
+                ScheduleView(viewModel: .init())
                     .font(.title)
                     .tabItemLabel(Text(tabItemTitle[0] ?? ""))
                     .tag(0)
