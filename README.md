@@ -7,6 +7,7 @@ Anime schedule, korean subtitle for iOS with SwiftUI + Combine and MVVM architec
 - [ ] Recent Subtitle
 - [ ] Bookmarks
 - [ ] Complete Anime List
+- [ ] Local DB
 
 ## References
 * [OHLI](https://ohli.moe)
