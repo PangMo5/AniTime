@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
+        "state": {
+          "branch": null,
+          "revision": "c0beedbc67e711cb2217f12cccb380ff014b27c9",
+          "version": "5.6.0"
+        }
+      },
+      {
+        "package": "Nuke",
+        "repositoryURL": "https://github.com/kean/Nuke.git",
+        "state": {
+          "branch": null,
+          "revision": "9318d02a8a6d20af56505c9673261c1fd3b3aebe",
+          "version": "7.6.3"
+        }
+      },
+      {
+        "package": "SwifterSwift",
+        "repositoryURL": "https://github.com/SwifterSwift/SwifterSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "644ebf4ba6e282712406c448bed90010fd4d7360",
+          "version": "5.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
