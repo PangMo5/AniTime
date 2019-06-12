@@ -11,7 +11,7 @@ import Combine
 import SwifterSwift
 
 class ScheduleViewModel: BindableObject {
-    var didChange = PassthroughSubject<Void, Never>()
+    let didChange = PassthroughSubject<Void, Never>()
     private var cancellables: [AnyCancellable] = []
     
     let segmentItemTitleList: [String] = ["일", "월", "화", "수", "목", "금", "토", "기타"]

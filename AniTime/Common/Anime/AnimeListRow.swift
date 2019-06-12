@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AnimeListRow : View {
     
-    let anime: Anime
+    var anime: Anime
     
     var body: some View {
         HStack(spacing: 16) {

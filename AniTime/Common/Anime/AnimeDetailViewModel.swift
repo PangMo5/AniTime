@@ -11,7 +11,7 @@ import Combine
 import SwifterSwift
 
 class AnimeDetailViewModel: BindableObject {
-    var didChange = PassthroughSubject<Void, Never>()
+    let didChange = PassthroughSubject<Void, Never>()
     private var cancellables: [AnyCancellable] = []
     
     // MARK: Input
@@ -32,8 +32,12 @@ class AnimeDetailViewModel: BindableObject {
     
     
     private let apiService: APIServiceType
-    init(apiService: APIServiceType = APIService()) {
+    let anime: Anime
+    
+    init(anime: Anime, apiService: APIServiceType = APIService()) {
         self.apiService = apiService
+        self.anime = anime
+        
         
         bindData()
         bindViews()

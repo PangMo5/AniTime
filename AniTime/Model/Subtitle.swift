@@ -13,25 +13,20 @@ struct Subtitle: Decodable, Hashable, Identifiable {
     let id: Int
     let creater: String
     let createTime: Date?
+    private let _createTime: String?
     let animeName: String
     let episode: Int?
     let urlLink: URL?
     private let _urlLink: String?
     
     init(from decoder: Decoder) throws {
-        let fomatter = DateFormatter()
-        fomatter.dateFormat = "yyyyMMddHHmmss"
-        (decoder as? JSONDecoder)?.dateDecodingStrategy = .formatted(fomatter)
         
         let map = try decoder.container(keyedBy: CodingKeys.self)
         self.creater = try map.decode(String.self, forKey: .creater)
         self.animeName = (try? map.decode(String.self, forKey: .animeName)) ?? ""
-        self.createTime = try? map.decode(Date.self, forKey: .createTime)
+        self._createTime = try? map.decode(String.self, forKey: .createTime)
         self.episode = (try? map.decode(Int.self, forKey: .episode)) ?? 0
         self._urlLink = try? map.decode(String.self, forKey: .urlLink)
-        
-        //temp
-        self.id = createTime?.timeIntervalSince1970.int ?? 0
         
         // MARK: Data Binding
         if let urlLink = _urlLink?.lowercased(),
@@ -46,6 +41,17 @@ struct Subtitle: Decodable, Hashable, Identifiable {
         } else {
             self.urlLink = nil
         }
+        
+        if let createTime = _createTime {
+            let fomatter = DateFormatter()
+            fomatter.dateFormat = "yyyyMMddHHmmss"
+            self.createTime = fomatter.date(from: createTime)
+        } else {
+            self.createTime = nil
+        }
+        
+        //temp
+        self.id = self.createTime?.timeIntervalSince1970.int ?? Int.random(in: Int.min..<Int.max)
     }
     
     init(sampleID: Int, animeTitle: String) {
@@ -56,6 +62,7 @@ struct Subtitle: Decodable, Hashable, Identifiable {
         self.episode = 12
         self.urlLink = URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Anime_eye.svg/340px-Anime_eye.svg.png")
         
+        self._createTime = nil
         self._urlLink = nil
     }
     

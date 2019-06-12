@@ -12,34 +12,28 @@ struct AnimeDetailView : View {
     
     @ObjectBinding var viewModel: AnimeDetailViewModel
     
-    let anime: Anime
     let dayName: String?
     
     var body: some View {
         List {
-            AnimeHeaderView(anime: anime, dayName: dayName)
-            ForEach(self.viewModel.subtitleList) { subtitle in
-                NavigationButton(destination: WebView(request: URLRequest(url: subtitle.urlLink!))) {
-                    SubtitleListRow(subtitle: subtitle)
+            AnimeHeaderView(anime: viewModel.anime, dayName: dayName)
+            Section(header: Text("자막 리스트")) {
+                ForEach(viewModel.subtitleList) { subtitle in
+                    if subtitle.urlLink != nil {
+                        NavigationButton(destination: DetailWebView(subtitle: subtitle)) {
+                            SubtitleListRow(subtitle: subtitle)
+                        }
+                    }
                 }
             }
         }
         .padding([.top, .bottom, .leading, .trailing], 0)
         .edgesIgnoringSafeArea(.top)
         .onAppear {
-            self.viewModel.id = self.anime.id
+            self.viewModel.id = self.viewModel.anime.id
         }
     }
 }
-
-#if DEBUG
-struct AnimeDetailView_Previews : PreviewProvider {
-    static var previews: some View {
-        AnimeDetailView(viewModel: .init(), anime: Anime(sampleID: 1, name: "Test"), dayName: "수")
-            .colorScheme(.dark)
-    }
-}
-#endif
 
 struct AnimeHeaderView : View {
 
@@ -67,7 +61,7 @@ struct AnimeHeaderView : View {
                         .lineLimit(nil)
                         .shadow(color: .black, radius: 8)
                     
-                    Text("\(dayName == nil ? "" : "\(dayName!) ~")\(anime.timeStr)")
+                    Text("\(dayName == nil ? "" : "\(dayName!) / ")\(anime.timeStr) ~")
                         .font(Font.system(.headline, design: .rounded))
                         .shadow(color: .black, radius: 8)
                     
@@ -92,3 +86,22 @@ struct AnimeHeaderView : View {
         .listRowInsets(EdgeInsets())
     }
 }
+
+fileprivate struct DetailWebView : View {
+    
+    var subtitle: Subtitle
+    
+    var body: some View {
+        return WebView(url: subtitle.urlLink!)
+            .navigationBarTitle(Text(subtitle.creater), displayMode: .inline)
+    }
+}
+
+#if DEBUG
+struct AnimeDetailView_Previews : PreviewProvider {
+    static var previews: some View {
+        AnimeDetailView(viewModel: .init(anime: Anime(sampleID: 1, name: "Test")), dayName: "수")
+            .colorScheme(.dark)
+    }
+}
+#endif

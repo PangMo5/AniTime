@@ -15,11 +15,13 @@ struct MainContainerView: View {
     
     var body: some View {
         NavigationView {
+            ScheduleView(viewModel: .init())
+                .font(.title)
+                .tabItemLabel(Text(tabItemTitle[0] ?? ""))
+                .tag(0)
+            /*
             TabbedView(selection: $selection) {
-                ScheduleView(viewModel: .init())
-                    .font(.title)
-                    .tabItemLabel(Text(tabItemTitle[0] ?? ""))
-                    .tag(0)
+                
                 Text("완결 애니 목록")
                     .font(.title)
                     .tabItemLabel(Text(tabItemTitle[1] ?? ""))
@@ -33,6 +35,7 @@ struct MainContainerView: View {
                     .tabItemLabel(Text(tabItemTitle[3] ?? ""))
                     .tag(3)
             }
+            */
             .navigationBarTitle(Text(tabItemTitle[$selection.value] ?? ""))
         }
     }

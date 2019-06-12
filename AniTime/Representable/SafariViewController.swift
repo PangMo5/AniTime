@@ -6,27 +6,25 @@
 //  Copyright © 2019 ShirouCo. All rights reserved.
 //
 
+import SafariServices
 import SwiftUI
-import WebKit
 
-struct WebView : UIViewRepresentable {
+struct WebView: UIViewControllerRepresentable {
     
-    let request: URLRequest
+    let url: URL
     
-    func makeUIView(context: Context) -> WKWebView  {
-        return WKWebView()
+    func makeUIViewController(context: UIViewControllerRepresentableContext<WebView>) -> SFSafariViewController {
+        return SFSafariViewController(url: url)
     }
     
-    func updateUIView(_ uiView: WKWebView, context: Context) {
-        uiView.load(request)
-    }
-    
+    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<WebView>) {}
 }
+
 
 #if DEBUG
 struct WebView_Previews : PreviewProvider {
     static var previews: some View {
-        WebView(request: URLRequest(url: URL(string: "https://www.apple.com")!))
+        WebView(url: URL(string: "https://www.apple.com")!)
     }
 }
 #endif

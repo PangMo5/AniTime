@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SubtitleListRow : View {
     
-    let subtitle: Subtitle
+    @State var subtitle: Subtitle
     
     var body: some View {
         VStack(alignment: .leading) {

@@ -15,7 +15,7 @@ struct AnimeListView : View {
     
     var body: some View {
         List(animeList) { anime in
-            NavigationButton(destination: AnimeDetailView(viewModel: .init(), anime: anime, dayName: self.dayName)) {
+            NavigationButton(destination: AnimeDetailView(viewModel: .init(anime: anime), dayName: self.dayName)) {
                 AnimeListRow(anime: anime)
             }
         }
