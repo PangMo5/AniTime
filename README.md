@@ -1,6 +1,8 @@
 ## AniTime
 Anime schedule, korean subtitle for iOS with SwiftUI + Combine and MVVM architecture
 
+I'm developing a new one for the SwiftUI life cycle announced at WWDC 2020.  I will push it as soon as possible.
+
 ## App Features
 - [x] Anime schedule List
 - [x] Anime Detail
